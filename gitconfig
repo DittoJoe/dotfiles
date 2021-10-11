@@ -12,6 +12,7 @@
 [core]
   pager = less -FRSX
 	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
+	excludesfile = /Users/joerohde/.gitignore_global
 
 [alias]
   co = checkout
@@ -50,5 +51,10 @@
 [pull]
   rebase = false
 [user]
-	email = joseph.jf.roh.jf.rohde@gmail.com
+	email = joseph.jf.rohde@gmail.com
 	name = Joseph Rohde
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
